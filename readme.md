@@ -153,13 +153,14 @@ For you:
 
 MVP 
 =====
+- Title page must be complete and pristine
 - Must be responsive
 - All interactivity should work flawlessly
-- Title page must be pristine
 - Not an eyesore
 
 Post-MVP 
 =====
+- Add 2 other sections (near-you & for-you)
 - Include all listed API
 - All data must be current and working
 - Capacity to store user data locally or retireve said data from browser
