@@ -21,7 +21,7 @@ To retrieve the appropriate data, I use:
  API Snippets
  ======
 
-### [Joke API](https://v2.jokeapi.dev/joke/Any?type=single) (to retrieve a one-line joke)
+### [Joke API](https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit) (to retrieve a one-line joke)
 
 ```{
   "error": false,

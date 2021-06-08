@@ -1,0 +1,102 @@
+body {
+  background-color: #fff8e7;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  color: #fff8e7;
+  background-color: #800000;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 3rem;
+}
+header a {
+  color: #fff8e7;
+  text-decoration: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+.left > h3 {
+  display: inline;
+  margin-left: 1rem;
+}
+.ga-logo {
+  display: inline;
+  height: 40px;
+}
+
+nav {
+  width: 40vw;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* HOME */
+#home {
+  display: grid;
+  grid-template-areas: 
+  ". greeting ."
+  "inspo greeting todo"
+  "inspo . todo"
+  ". . .";
+  height: 75vh;
+  margin: 2rem;
+}
+#home > h1 {
+  grid-area: greeting;
+}
+.to-do-container {
+  grid-area: todo;
+}
+.inspirational {
+  grid-area: inspo;
+}
+
+/* NEAR YOU */
+#near-you {
+  display: grid;
+  grid-template-areas: 
+  "head head . ."
+  "news news weather weather"
+  "news news weather weather";
+  height: 75vh;
+  margin: 2rem;
+}
+#near-you > h2{
+  grid-area: head;
+}
+.news {
+  background-color: gray;
+  grid-area: news;
+}
+.forecast {
+  background-color: white;
+  grid-area: weather;
+}
+
+/* FOR YOU */
+
+
+/* footer */
+footer {
+  color: #fff8e7;
+  background-color: #800000;
+  height: 20vh;
+  width: 100vw;
+  position:absolute;
+}
+footer h5{
+  position: relative
+}
+footer a{
+  color: orange;
+  /* text-decoration: none; */
+}

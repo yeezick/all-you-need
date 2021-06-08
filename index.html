@@ -12,8 +12,8 @@
   <body>
     <header>
       <div class="left">
-        <!-- <img src="" alt="">  -->
-        <h2>UserName</h2>
+        <img class="ga-logo" src="images/ga-logo.png" alt=""> 
+        <h3>UserName</h3>
       </div>
 
       <nav>
@@ -32,8 +32,9 @@
           <h3>Left on your agenda:</h3>
           <ul class="list-items"></ul>
           <form>
-            <label for="to-do">Have more to do?</label>
-            <input type="text" />
+            <label for="to-do">Missing something?</label><br>
+            <input class="todo-input" type="text" />
+            <button class="todo-button">Submit</button>
           </form>
         </div>
 
@@ -43,7 +44,7 @@
           <p class="inspirational-quote">Link me to quote API</p>
         </div>
       </section>
-
+<hr>
       <!-- Near you -->
       <section id="near-you">
         <h2>What's going on near you?</h2>
@@ -51,20 +52,40 @@
         <!-- News -->
         <article class="news">
           <h3>Headlines in the US:</h3>
-          <p>Link random news API to me</p>
+          <h3 class="headline"></h4>
+            <h4 class="author"></h4>
+          <p class="news-text">Link random news API to me</p>
           <label for="publisher-dropdown">Choose by publisher:</label>
-          <select name="" id="publisher-dropdown"></select>
+          <select name="" id="publisher-dropdown">
+            
+          </select>
         </article>
 
         <!-- forecast -->
         <div class="forecast">
           <h3>Forecast for your city:</h3>
-          <div
+          <div class="urgent-weather-data">
+            <!-- here goes temperature + weather desc +weather image -->
+            <p>Temperature: <span id="temp"></span>°F</p>
+            <p>High: <span id="high"></span>°F</p>
+            <p>Low: <span id="low"></span>°F</p>
+            <p>Humidity: <span id="humidity"></span></p>
+          </div>
+          <div class="extra-weather-data">
+            <!-- here goes feels like, high, low, humidity -->
+          </div>
         </div>
       </section>
 
       <!-- For you -->
       <section id="for-you"></section>
+      <!-- <footer>
+        <h5>
+          A product by <a href="https://erickmanrique.com/">Erick Manrique</a>
+          <br>
+          In association with <a href="https://generalassemb.ly/">General Assembly</a>
+        </h5>
+      </footer> -->
     </main>
   </body>
 </html>
