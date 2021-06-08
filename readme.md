@@ -154,14 +154,16 @@ For you:
 MVP 
 =====
 - Title page must be complete and pristine
+- Near you page must be complete and pristine
+- {News, Weather, Inspirational} API's should be linked effectively
 - Must be responsive
 - All interactivity should work flawlessly
 - Not an eyesore
 
 Post-MVP 
 =====
-- Add 2 other sections (near-you & for-you)
-- Include all listed API
+- Add for-you section
+- Include rest of listed API {bitcoin, joke, animal, nasa}
 - All data must be current and working
 - Capacity to store user data locally or retireve said data from browser
 - try to add animation to loading / welcome message
