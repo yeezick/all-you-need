@@ -187,7 +187,5 @@ Post-MVP
  =====
 Based on a personal gauge of my experience, the timeframes below are listed in the following format: 
 <br>
-"Task" | "Priority" | time expected to completion
-<br>
 ### Tasks
 <img src="images/timeframe.png">
