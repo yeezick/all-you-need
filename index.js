@@ -1,20 +1,38 @@
+// const username = prompt("Before we begin, what's your name?")
+// const city = prompt("What city are you in?");
 
-// HEADER
-const greeting = document.querySelector("#home>h1");
-const quote = document.querySelector(".inspirational-quote");
+/*========================
+  Header
+========================*/
+// const userID = document.querySelector("div.left > h3");
+// userID.innerText = username;
+
+// const greeting = document.querySelector("#home>h1");
+// greeting.innerText = username;
+
+
 
 /*========================
 Inspirational Quote
 ========================*/
 const inspoUrl = "http://api.quotable.io/random";
 
+const quote = document.querySelector(".inspirational-quote");
+const quoteAuthor = document.querySelector(".quote-author");
+
 const getQuotes = async (url) => {
   try {
     const response = await axios.get(url);
     const quoteString = response.data.content;
+    
+    // changes author text to author from api
+    quoteAuthor.innerText = `By: ${response.data.author}`
+
     // changes quote from p tag to quote from API
     const quoteChange = (string) => (quote.innerText = string);
     quoteChange(quoteString);
+
+
   } catch (error) {
     console.log(error);
   }
@@ -22,7 +40,7 @@ const getQuotes = async (url) => {
 getQuotes(inspoUrl);
 
 /*=====================
-News
+  News
 ======================*/
 const newsUrl =
 "https://newsapi.org/v2/top-headlines?country=us&apiKey=6f7081542a3346a4865b765624dc3a48";
@@ -122,19 +140,6 @@ const createList = (e) => {
   todoInput.value = '';
 }
 todoButton.addEventListener("click", createList);
-
-//BONUS create delete button
-// function deleteItem() {
-//   //create delete button
-//   const deleteBtn = document.createElement('button');
-//   deleteBtn.innerText = 'buh-bye';
-//   //add a click event listener to it
-//   deleteBtn.addEventListener('click', deleteListItem);
-//   //returning the delete button
-//   return deleteBtn;
-//   //append deleteBtn to list item => see inside of addToList function
-// }
-
 
 function deleteListItem () {
   this.remove();
