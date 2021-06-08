@@ -1,40 +1,13 @@
 
-
-
-
 // HEADER
 const greeting = document.querySelector("#home>h1");
 const quote = document.querySelector(".inspirational-quote");
 
-// to-do
-const todoList = document.querySelector(".list-items");
-const todoInput = document.querySelector(".todo-input");
-const todoButton = document.querySelector(".todo-button");
-
-// NEAR YOU
-// news
-const newsDropdown = document.querySelector("#publisher-dropdown");
-const newsText = document.querySelector(".news-text");
-const headline = document.querySelector(".headline");
-const author = document.querySelector(".author");
-
-
-// weather
-const temperature = document.querySelector("#temp");
-const high = document.querySelector("#high");
-const low = document.querySelector("#low");
-const humidity = document.querySelector("#humidity");
-
-// api urls
-const inspoUrl = "http://api.quotable.io/random";
-const newsUrl =
-"https://newsapi.org/v2/top-headlines?country=us&apiKey=6f7081542a3346a4865b765624dc3a48";
-const weatherUrl =
-"http://api.openweathermap.org/data/2.5/weather?q=miami&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4"; //has preset location to miami
-
 /*========================
 Inspirational Quote
 ========================*/
+const inspoUrl = "http://api.quotable.io/random";
+
 const getQuotes = async (url) => {
   try {
     const response = await axios.get(url);
@@ -51,6 +24,13 @@ getQuotes(inspoUrl);
 /*=====================
 News
 ======================*/
+const newsUrl =
+"https://newsapi.org/v2/top-headlines?country=us&apiKey=6f7081542a3346a4865b765624dc3a48";
+
+const newsDropdown = document.querySelector("#publisher-dropdown");
+const newsText = document.querySelector(".news-text");
+const headline = document.querySelector(".headline");
+const author = document.querySelector(".author");
 
 // callback function make a new option elment for each publisher
 function publisherOptions (articles) {
@@ -87,7 +67,7 @@ const getNews = async (url) => {
     newsDropdown.addEventListener("change", () => changeNews(articles))
     // console.log(articles[0].source)
     publisherOptions(articles);
-    // console.log(articles);
+    console.log(articles);
   } catch (error) {
     console.log(error);
   }
@@ -97,6 +77,15 @@ getNews(newsUrl)
 /*=====================
 Weather
 ======================*/
+const weatherUrl =
+"http://api.openweathermap.org/data/2.5/weather?q=miami&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4"; //has preset location to miami
+
+const temperature = document.querySelector("#temp");
+const high = document.querySelector("#high");
+const low = document.querySelector("#low");
+const humidity = document.querySelector("#humidity");
+
+
 const weather = async (url) => {
   try {
     const response = await axios.get(url);
@@ -119,10 +108,37 @@ weather(weatherUrl);
 /*========================
     To-Do
 ========================*/
-const createList = () => {
-  
-}
+const todoList = document.querySelector(".list-items");
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
 
+
+const createList = (e) => {
+  e.preventDefault();
+  const listItem = document.createElement("li");
+  listItem.innerText = todoInput.value;
+  todoList.appendChild(listItem);
+  listItem.addEventListener('click', deleteListItem);
+  todoInput.value = '';
+}
+todoButton.addEventListener("click", createList);
+
+//BONUS create delete button
+// function deleteItem() {
+//   //create delete button
+//   const deleteBtn = document.createElement('button');
+//   deleteBtn.innerText = 'buh-bye';
+//   //add a click event listener to it
+//   deleteBtn.addEventListener('click', deleteListItem);
+//   //returning the delete button
+//   return deleteBtn;
+//   //append deleteBtn to list item => see inside of addToList function
+// }
+
+
+function deleteListItem () {
+  this.remove();
+}
 
 /*=====================
 News
