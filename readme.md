@@ -190,13 +190,4 @@ Based on a personal gauge of my experience, the timeframes below are listed in t
 "Task" | "Priority" | time expected to completion
 <br>
 ### Tasks
-HTML Skeleton | 3 hours<
-br>
-HTML Layout via CSS | 5 hours
-<br>
-Finalize styling (ready for JS incorporation) | 2 hours
-<br>
-Begin setting up API's | 2 hours per API (10 hours total) (MVP: 1 API for 2 hours)
-<br>Link API's to website appropriately, accounting for HTML responses |4 hours
-<br>
-Debug and Perfect until content | weekend hours
+<img src="images/timeframe.png">
