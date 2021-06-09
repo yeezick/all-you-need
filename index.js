@@ -28,7 +28,7 @@ const userID = document.querySelector("div.left > h3");
 userID.innerText = username;
 
 const greeting = document.querySelector("#home>h1");
-greeting.innerHTML = `Welcome Home,<br> ${username}`;
+greeting.innerHTML = `Welcome<br> Home,<br> ${username}`;
 */
 
 /*========================
@@ -59,7 +59,7 @@ getQuotes(inspoUrl);
 /*=====================
   News
 ======================*/
-/*
+
 
 const newsUrl =
 "https://newsapi.org/v2/top-headlines?country=us&apiKey=6f7081542a3346a4865b765624dc3a48";
@@ -111,7 +111,7 @@ const getNews = async (url) => {
 };
 getNews(newsUrl)
 
-*/
+
 
 /*=====================
 Weather

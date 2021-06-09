@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="index.js"></script>
@@ -25,17 +27,19 @@
     <main>
       <!-- home -->
       <section id="home"> 
-        <h1>Good Morning, <br>UserName</h1>
+        <h1>Good <br> Morning, <br>UserName</h1>
 
         <!-- to-do list -->
         <div class="to-do-container">
           <h3 class="card-header">Left on your agenda:</h3>
+          <div class="card-body">
           <ul class="list-items"></ul>
           <form class="form-div">
             <label for="to-do">Missing something?</label><br>
             <input class="todo-input" type="text" />
             <button class="todo-button">Submit</button>
           </form>
+        </div>
         </div>
 
         <!-- inspirational quote -->
@@ -44,9 +48,11 @@
           <div class="card-header">
           <h3>Something to keep you going today:</h3>
           <h4 class="quote-author"></h4>
+          <div class="card-body">
+          <p class="inspirational-quote">Link me to quote API</p>
+          </div>
           </div>
 
-          <p class="inspirational-quote">Link me to quote API</p>
         </div>
         <div class="star star1"></div>
         <div class="star star2"></div>
@@ -89,7 +95,7 @@
 
       <!-- For you -->
       <section id="for-you">
-        
+
       </section>
       <footer>
         <h5 class="footer-text">

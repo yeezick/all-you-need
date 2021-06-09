@@ -96,9 +96,16 @@ body {
   background-color: #16263e;
   margin: 0;
   text-align: center;
+  font-family: "Baloo Tammudu 2", Georgia
 }
 main {
   padding-top: 3rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Code Pro";
+}
+h1 {
+  font-size: 4rem
 }
 
 /* HEADER */
@@ -144,41 +151,48 @@ nav {
 #home {
   display: grid;
   grid-template-areas:
-    ". greeting ."
-    "inspo greeting todo"
-    "inspo . todo";
+  ". greeting ."
+  "inspo greeting todo"
+  "inspo . todo";
   /* padding: 5rem; */
   /* margin-top: 3rem; */
+  height: auto;
+  padding-bottom: 1rem;
 }
 #home > h1 {
   grid-area: greeting;
-  background-color: #16263e;
+  /* background-color: #16263e; */
   color: #fff8e7;
-  border: 1px solid #fff8e7;
+  border: 7px double #fff8e7;
   border-radius: 16px;
   padding: 1rem;
   margin-bottom: 3vh;
-  
 }
 h3{
 text-decoration: underline #F3C677;
+font-size: 2rem;
 }
 .card-header {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.card-body {
+  background-color: #fff8e7;
+  color: #16263e;
+  margin: 0;
 }
 .to-do-container, .inspirational {
-  background-color: #16263e;
+  /* background-color: #16263e; */
   color: white;
-  border: 1px solid #fff8e7;
+  border: 7px double #fff8e7;
   border-radius: 16px;
-  padding: 1rem;
+  margin-top: 30vh;
 }
 
 /* quote */
 .inspirational {
   grid-area: inspo;
   /* background-color: white; */
-  margin-right: 10vw;
+  margin-right: 3vw;
   max-width: 25vw;
 }
 
@@ -186,7 +200,7 @@ text-decoration: underline #F3C677;
 .to-do-container {
   grid-area: todo;
   /* background-color: white; */
-  margin-left: 10vw;
+  margin-left: 3vw;
   max-width: 25vw;
 }
 form {
