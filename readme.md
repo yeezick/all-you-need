@@ -1,8 +1,8 @@
-# Home.IO
+# Home.io
 
 ## Description:
 
-### Welcome to Home.IO!
+### Welcome to Home.io!
 
 A blend of work and play, this app keeps your head on straight and prepared for the day! Be it with a joke, a cat, some news, or your very own to-do, you won't lose your way when you're already home &copy;!
 
