@@ -161,6 +161,7 @@ nav {
   /* padding: 5rem; */
   /* margin-top: 3rem; */
   height: auto;
+  /* width: 100vw; */
   padding-bottom: 1rem;
 }
 #home > h1 {
@@ -169,7 +170,7 @@ nav {
   color: #fff8e7;
   border: 7px double #fff8e7;
   border-radius: 16px;
-  padding: 1rem;
+  /* padding: 1rem; */
   margin-bottom: 3vh;
 }
 #home h3{
@@ -246,7 +247,6 @@ NEAR  YOU
   }
 /* news */
 .news, .forecast {
-  background-color: #fff8e7;
   color:#16263e;
   border: 5px solid #F3C677;
   border-radius: 5px;
@@ -256,6 +256,7 @@ NEAR  YOU
 }
 .news {
   grid-area: news;
+  background-color: #fff8e7;
 }
 
 /*weather  */
@@ -267,13 +268,20 @@ NEAR  YOU
   "temp description image"
   "high low humidity";
   padding: 1rem;
+  background-color: rgba(0,0,0, 0);;
 }
-.forecast h3 {
+.forecast .card-header {
   grid-area: header;
+  background-color:#fff8e7 ;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 .forecast h4 {
   font-family: "Source Code Pro", sans-serif;
   text-decoration: wavy purple;
+  color: white;
+  background-color: rgba(0,0,0, 0.1);
 }
 .temperature {
   grid-area: temp;
@@ -289,6 +297,7 @@ NEAR  YOU
   grid-area: image;
   background-color: gray;
   border-radius: 50%;
+  margin: 0 auto;
 }
 .hi {
   grid-area: high;
@@ -305,9 +314,11 @@ NEAR  YOU
   font-weight: 800;
   font-size: 1.5rem;
 }
+
 span {
   font-weight: 400 ;
-  font-family: "Baloo Tammudu 2", Georgia;
+  color: black; 
+  background-color: white;
 }
 /* 
 FOR YOU 
@@ -338,4 +349,61 @@ align-self: center;
 footer a {
   color: red;
   /* text-decoration: none; */
+}
+
+
+/* =====================
+MEDIA QUERIES
+========================*/
+@media screen and (max-width: 600px) {
+
+  /* home */
+  #home {
+    grid-template-areas:
+    "greeting"
+    "inspo"
+    "todo";
+    /* padding: 5rem; */
+    /* margin-top: 3rem; */
+    height: auto;
+    /* width: 100vw; */
+    padding-bottom: 1rem;
+  }
+  #home h1 {
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .inspirational, .to-do-container {
+    margin: 2rem 1rem;
+    max-width: 100vw; 
+  }
+
+  /* near you */
+  #near-you {
+    grid-template-areas:
+      "head"
+      "weather"
+      "news";
+      margin-top: 5vh;
+      height: 60vh;
+      color: #fff8e7;
+  }
+  .news, .forecast {
+    width: 100vw;
+  margin: 0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.forecast {
+  grid-template-areas: 
+  "header" 
+  "image"
+  "description"
+  "temp"
+  "high"
+  "low"
+  "humidity";
+  /* padding: 1rem; */
+}
 }

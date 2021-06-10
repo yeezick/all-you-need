@@ -142,18 +142,20 @@ function firstLetterCaseWeather(description) {
 function weatherChanger(url) {
   // changes the values on html to current data based on api
   const main = url.data.main;
-  const desc = url.data.weather[0].description;
+  const desc = "thunderstorm"
+  // url.data.weather[0].description;
   console.log(desc);
-  firstLetterCaseWeather(desc);
-
+  
   temperature.innerText = `${main.temp}°F`;
   high.innerText = `${main.temp_max}°F`;
   low.innerText = `${main.temp_min}°F`;
   humidity.innerText = main.humidity;
 
-  description.innerText = desc;
+  description.innerText = firstLetterCaseWeather(desc);
   // depending on case, image attribute will have different icon
   let iconCode = null;
+  const forecastContainer = document.querySelector(".forecast");
+  console.log(forecastContainer.style)
 
   switch (desc) {
     case "clear sky":
@@ -176,6 +178,7 @@ function weatherChanger(url) {
       break;
     case "thunderstorm":
       iconCode = "11d";
+    forecastContainer.style.backgroundImage = "url(https://media0.giphy.com/media/aPlzgxciAwVj2/giphy.gif?cid=ecf05e471odl2cftb03dc0hfeahz10o5bz9sd1z724x4wsw6&rid=giphy.gif&ct=g)";
       break;
     case "snow":
       iconCode = "13d";
