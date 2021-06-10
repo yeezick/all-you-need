@@ -2,8 +2,8 @@
 I follow along with comments to understand the changes happening */
 * {
   /* they set the document to be full width over default styling */
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 #home {
@@ -18,54 +18,53 @@ I follow along with comments to understand the changes happening */
   align-items: center;
 }
 
-
 #home .star {
   /* this styling sets the inner containers to stay in place */
   /* it then establishes 2 animation "functions" to follow. one to give a pulsing affect. another to shift images along an axis and create depth */
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   animation: animate 8s ease-in-out infinite, backgroundmove 16s linear infinite;
 }
 
-#home .star.star1{
+#home .star.star1 {
   /* each star image is given a different start point to randomize the pulsing effect and make appear as if you are traveling into the animation */
   animation-delay: 0s;
-  background: url(stars/star1.png)
+  background: url(stars/star1.png);
 }
-#home .star.star2{
+#home .star.star2 {
   animation-delay: -1s;
-  background: url(stars/star2.png)
+  background: url(stars/star2.png);
 }
-#home .star.star3{
+#home .star.star3 {
   animation-delay: -2s;
-  background: url(stars/star3.png)
+  background: url(stars/star3.png);
 }
-#home .star.star4{
+#home .star.star4 {
   animation-delay: -3s;
-  background: url(stars/star4.png)
+  background: url(stars/star4.png);
 }
-#home .star.star5{
+#home .star.star5 {
   animation-delay: -4s;
-  background: url(stars/star5.png)
+  background: url(stars/star5.png);
 }
-#home .star.star6{
+#home .star.star6 {
   animation-delay: -5s;
-  background: url(stars/star6.png)
+  background: url(stars/star6.png);
 }
-#home .star.star7{
+#home .star.star7 {
   animation-delay: -6s;
-  background: url(stars/star7.png)
+  background: url(stars/star7.png);
 }
-#home .star.star8{
+#home .star.star8 {
   animation-delay: -7s;
-  background: url(stars/star8.png)
+  background: url(stars/star8.png);
 }
 
-/* uncomment to initiate animation
+ /* uncomment to initiate animation */
  @keyframes animate {
   0%, 20%, 40%, 60%, 80%, 100% {
     opacity: 0;
@@ -82,33 +81,31 @@ I follow along with comments to understand the changes happening */
   100% {
     transform: scale(2);
   }
-} */
+} 
 /*
 Once again this animation would not have been possible without the guidance of Online Tutorial at (https://www.youtube.com/watch?v=25npMh1hzi8&ab_channel=OnlineTutorials)
 Thank you, Online Tutorial
 */
 
-
-
-
-
 body {
   background-color: #16263e;
   margin: 0;
   text-align: center;
-  font-family: "Baloo Tammudu 2", Georgia
+  font-family: "Baloo Tammudu 2", Georgia;
 }
 main {
   padding-top: 3rem;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Code Pro", 'Lucida Sans';
-}
-h1 {
-  font-size: 4rem
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Press Start 2P", "Lucida Sans";
 }
 h2 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   padding-bottom: 1rem;
 }
 
@@ -155,9 +152,9 @@ nav {
 #home {
   display: grid;
   grid-template-areas:
-  ". greeting ."
-  "inspo greeting todo"
-  "inspo . todo";
+    ". greeting ."
+    "inspo greeting todo"
+    "inspo . todo";
   /* padding: 5rem; */
   /* margin-top: 3rem; */
   height: auto;
@@ -170,22 +167,24 @@ nav {
   color: #fff8e7;
   border: 7px double #fff8e7;
   border-radius: 16px;
-  /* padding: 1rem; */
+  padding: 1rem;
   margin-bottom: 3vh;
+  font-size: 2.5rem;
 }
-#home h3{
-text-decoration: underline #fff8e7;
-font-size: 2rem;
+#home h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 .card-header {
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 .card-body {
   background-color: #fff8e7;
   color: #16263e;
   margin: 0;
 }
-.to-do-container, .inspirational {
+.to-do-container,
+.inspirational {
   /* background-color: #16263e; */
   color: white;
   border: 7px double #fff8e7;
@@ -219,7 +218,7 @@ form {
   border-radius: 3px;
 }
 .todo-button {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 5px;
   padding: 1px;
 }
@@ -233,55 +232,77 @@ NEAR  YOU
     "head head weather weather"
     "news news weather weather"
     "news news weather weather";
-    margin-top: 5vh;
-    height: 60vh;
-    color: #fff8e7;
+  margin-top: 5vh;
+  height: 60vh;
+  color: #fff8e7;
 }
 #near-you > h2 {
   grid-area: head;
   /* padding-bottom: 5vh; */
 }
-#near-you h3{
-  text-decoration: underline overline black;
+#near-you h3 {
+  text-decoration: overline #fff8e7;
   font-size: 2rem;
-  }
+  /* font-family: 'Press Start 2P'; */
+}
 /* news */
-.news, .forecast {
-  color:#16263e;
-  border: 5px solid #F3C677;
+.news,
+.forecast {
+  color: #16263e;
+  border: 5px solid #f3c677;
   border-radius: 5px;
   margin: 0 2rem;
   padding: 1rem;
-  
 }
 .news {
   grid-area: news;
   background-color: #fff8e7;
+}
+.news h4 {
+  font-family: "source code pro", serif;
+  text-decoration: overline darkslateblue;
+}
+.headline {
+  font-weight: 600;
+  font-size: 1.15rem;
 }
 
 /*weather  */
 .forecast {
   grid-area: weather;
   display: grid;
-  grid-template-areas: 
-  "header header image"
-  "temp description image"
-  "high low humidity";
+  grid-template-areas:
+    "header header image"
+    "temp description description"
+    "high low humidity";
   padding: 1rem;
-  background-color: rgba(0,0,0, 0);;
+  background-color: rgba(0, 0, 0, 0);
 }
 .forecast .card-header {
   grid-area: header;
-  background-color:#fff8e7 ;
+  /* background-color:#fff8e7 ; */
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
+
 .forecast h4 {
   font-family: "Source Code Pro", sans-serif;
   text-decoration: wavy purple;
   color: white;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.forecast h3 {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 3px solid #f3c677;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.forecast p {
+  color: gold;
+  font-weight: 600;
 }
 .temperature {
   grid-area: temp;
@@ -295,9 +316,14 @@ NEAR  YOU
 }
 .weather-image {
   grid-area: image;
-  background-color: gray;
   border-radius: 50%;
   margin: 0 auto;
+  background-repeat: no-repeat;
+}
+.weather-image > img {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border: solid #f3c677;
 }
 .hi {
   grid-area: high;
@@ -316,21 +342,22 @@ NEAR  YOU
 }
 
 span {
-  font-weight: 400 ;
-  color: black; 
-  background-color: white;
+  font-weight: 400;
+  color: #fff8e7;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 0 0.5rem;
 }
 /* 
 FOR YOU 
 */
-
 
 /* 
 FOOTER
 */
 footer {
   color: #16263e;
-  background-color: #F3C677;
+  background-color: #f3c677;
   height: 15vh;
   width: 100%;
   margin-top: 5rem;
@@ -344,25 +371,23 @@ footer {
   "n n n"; */
 }
 .footer-text {
-align-self: center;
+  align-self: center;
 }
 footer a {
   color: red;
   /* text-decoration: none; */
 }
 
-
 /* =====================
 MEDIA QUERIES
 ========================*/
 @media screen and (max-width: 600px) {
-
   /* home */
   #home {
     grid-template-areas:
-    "greeting"
-    "inspo"
-    "todo";
+      "greeting"
+      "inspo"
+      "todo";
     /* padding: 5rem; */
     /* margin-top: 3rem; */
     height: auto;
@@ -374,9 +399,10 @@ MEDIA QUERIES
     padding: 1rem;
     margin: 1rem auto;
   }
-  .inspirational, .to-do-container {
+  .inspirational,
+  .to-do-container {
     margin: 2rem 1rem;
-    max-width: 100vw; 
+    max-width: 100vw;
   }
 
   /* near you */
@@ -385,25 +411,26 @@ MEDIA QUERIES
       "head"
       "weather"
       "news";
-      margin-top: 5vh;
-      height: 60vh;
-      color: #fff8e7;
+    margin-top: 5vh;
+    height: 60vh;
+    color: #fff8e7;
   }
-  .news, .forecast {
-    width: 100vw;
-  margin: 0;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-.forecast {
-  grid-template-areas: 
-  "header" 
-  "image"
-  "description"
-  "temp"
-  "high"
-  "low"
-  "humidity";
-  /* padding: 1rem; */
-}
+  .news,
+  .forecast {
+    width: 97vw;
+    margin: 0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .forecast {
+    grid-template-areas:
+      "header"
+      "image"
+      "description"
+      "temp"
+      "high"
+      "low"
+      "humidity";
+    /* padding: 1rem; */
+  }
 }

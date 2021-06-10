@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Source+Code+Pro&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="index.js"></script>
@@ -71,7 +71,7 @@
         <!-- News -->
         <article class="news">
           <h3 class="card-header">Headlines in the US:</h3>
-          <h3 class="headline"></h4>
+          <h4 class="headline"></h4>
             <h4 class="author card-header"></h4>
           <p class="news-text">Link random news API to me</p>
           <label for="publisher-dropdown">Choose by publisher:</label>
@@ -82,16 +82,33 @@
 
         <!-- forecast -->
         <div class="forecast">
-          <h3 class="card-header">Forecast for your city:</h3>
+          <div class="card-header">
+            <h3>Forecast for your city:</h3>
+          </div>
             <!-- here goes temperature + weather desc +weather image -->
-            <!-- <div class="card-body"> -->
-            <h4 class="temperature">Temperature:<br> <span id="temp"></span></h4>
-            <h4 class="desc">Description:<br> <span id="description"></span></h4>
-            <img class="weather-image" src="" alt="An icon to match the description of the weather.">
-            <h4 class="hi">High: <br><span id="high"></span></h4>
-            <h4 class="lo">Low: <br><span id="low"></span></h4>
-            <h4 class="humid">Humidity: <br><span id="humidity"></span></h4>
-          <!-- </div> -->
+            <div class="temperature">
+            <p>
+              Temperature:<br> <span id="temp"></span></p>
+              </div>
+            <div class="desc">
+              <p>Description:<br> <span id="description"></span></p>
+            </div>
+
+              <div class="weather-image">
+              <img src="" alt="An icon to match the description of the weather.">
+            </div>
+
+              <div class="hi">
+              <p>High: <br><span id="high"></span></p>
+            </div>
+
+              <div class="lo">
+              <p>Low: <br><span id="low"></span></p>
+            </div>
+
+              <div class="humid">
+              <p>Humidity: <br><span id="humidity"></span></p>
+            </div>
           </div>
       </section>
 
@@ -99,13 +116,13 @@
       <section id="for-you">
 
       </section>
-      <!-- <footer>
+      <footer>
         <h5 class="footer-text">
           A product by <a href="https://erickmanrique.com/">Erick Manrique</a>
           <br>
           In association with <a href="https://generalassemb.ly/">General Assembly</a>
         </h5>
-      </footer> -->
+      </footer>
     </main>
   </body>
 </html>
