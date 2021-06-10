@@ -102,10 +102,14 @@ main {
   padding-top: 3rem;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Code Pro";
+  font-family: "Source Code Pro", 'Lucida Sans';
 }
 h1 {
   font-size: 4rem
+}
+h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 /* HEADER */
@@ -168,8 +172,8 @@ nav {
   padding: 1rem;
   margin-bottom: 3vh;
 }
-h3{
-text-decoration: underline #F3C677;
+#home h3{
+text-decoration: underline #fff8e7;
 font-size: 2rem;
 }
 .card-header {
@@ -195,6 +199,9 @@ font-size: 2rem;
   margin-right: 3vw;
   max-width: 25vw;
 }
+.inspirational-quote {
+  padding-top: 1rem;
+}
 
 /* to-do */
 .to-do-container {
@@ -204,11 +211,20 @@ font-size: 2rem;
   max-width: 25vw;
 }
 form {
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
-/*
+.todo-input {
+  border: 1px solid goldenrod;
+  border-radius: 3px;
+}
+.todo-button {
+  background-color: rgba(255,255,255,0);
+  border-radius: 5px;
+  padding: 1px;
+}
+/*=====================
 NEAR  YOU
-*/
+======================*/
 
 #near-you {
   display: grid;
@@ -224,7 +240,10 @@ NEAR  YOU
   grid-area: head;
   /* padding-bottom: 5vh; */
 }
-
+#near-you h3{
+  text-decoration: underline overline black;
+  font-size: 2rem;
+  }
 /* news */
 .news, .forecast {
   background-color: #fff8e7;
@@ -252,28 +271,44 @@ NEAR  YOU
 .forecast h3 {
   grid-area: header;
 }
+.forecast h4 {
+  font-family: "Source Code Pro", sans-serif;
+  text-decoration: wavy purple;
+}
 .temperature {
   grid-area: temp;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 .desc {
   grid-area: description;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 .weather-image {
   grid-area: image;
   background-color: gray;
   border-radius: 50%;
-  
 }
 .hi {
   grid-area: high;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 .lo {
   grid-area: low;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 .humid {
   grid-area: humidity;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
-
+span {
+  font-weight: 400 ;
+  font-family: "Baloo Tammudu 2", Georgia;
+}
 /* 
 FOR YOU 
 */

@@ -126,15 +126,29 @@ const high = document.querySelector("#high");
 const low = document.querySelector("#low");
 const humidity = document.querySelector("#humidity");
 
+// FIGURE OUT WHY THIS DOESNT WORK
+function firstLetterCaseWeather(description) {
+  let strArr = description.split("");
+  let firstLetter = strArr[0];
+  let capLetter = firstLetter.toUpperCase();  
+  strArr.splice(0,1,capLetter)
+  let readyCased = strArr.join('');
+  desc = readyCased;
+  console.log(desc);
+  return desc;
+}
+
 // function to read weather description and assign proper icon to image element
 function weatherChanger(url) {
   // changes the values on html to current data based on api
   const main = url.data.main;
   const desc = url.data.weather[0].description;
+  console.log(desc);
+  firstLetterCaseWeather(desc);
 
-  temperature.innerText = main.temp;
-  high.innerText = main.temp_max;
-  low.innerText = main.temp_min;
+  temperature.innerText = `${main.temp}°F`;
+  high.innerText = `${main.temp_max}°F`;
+  low.innerText = `${main.temp_min}°F`;
   humidity.innerText = main.humidity;
 
   description.innerText = desc;
@@ -177,6 +191,7 @@ function weatherChanger(url) {
 
   // console.log(data);
 }
+
 
 const weather = async (url) => {
   try {
