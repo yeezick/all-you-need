@@ -61,7 +61,7 @@ getQuotes(inspoUrl);
 ======================*/
 
 const newsUrl =
-  "https://cors-lite.herokuapp.com/https://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
+  "https://cors-lite.herokuapp.com/http://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
 
 const newsDropdown = document.querySelector("#publisher-dropdown");
 const newsText = document.querySelector(".news-text");
@@ -144,7 +144,7 @@ function firstLetterCaseWeather(description) {
 function weatherChanger(url) {
   // changes the values on html to current data based on api
   const main = url.data.main;
-  const desc = url.data.weather[0].description;
+  const desc = "clear sky"; //NEED TO ADD REST OF POSSIBLE WEATHER CONDITIONS
   // console.log(desc);
 
   temperature.innerText = `${main.temp}°F`;
