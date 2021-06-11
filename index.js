@@ -34,7 +34,7 @@ greeting.innerHTML = `Welcome<br> Home,<br> ${username}`;
 /*========================
 Inspirational Quote
 ========================*/
-const inspoUrl = "http://api.quotable.io/random";
+const inspoUrl = "http://cors-lite.herokuapp.com/http://api.quotable.io/random";
 
 const quote = document.querySelector(".inspirational-quote");
 const quoteAuthor = document.querySelector(".quote-author");
