@@ -61,7 +61,7 @@ getQuotes(inspoUrl);
 ======================*/
 
 const newsUrl =
-  "http://cors-lite.herokuapp.com/https://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
+  "https://cors-lite.herokuapp.com/https://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
 
 const newsDropdown = document.querySelector("#publisher-dropdown");
 const newsText = document.querySelector(".news-text");
