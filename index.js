@@ -34,7 +34,7 @@ greeting.innerHTML = `Welcome<br> Home,<br> ${username}`;
 /*========================
 Inspirational Quote
 ========================*/
-const inspoUrl = "http://cors-lite.herokuapp.com/http://api.quotable.io/random";
+const inspoUrl = "https://api.quotable.io/random";
 
 const quote = document.querySelector(".inspirational-quote");
 const quoteAuthor = document.querySelector(".quote-author");
@@ -61,7 +61,7 @@ getQuotes(inspoUrl);
 ======================*/
 
 const newsUrl =
-  "http://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
+  "https://api.mediastack.com/v1/news?access_key=6093edc68c7322dfa2913f7433667f4d&countries=us";
 
 const newsDropdown = document.querySelector("#publisher-dropdown");
 const newsText = document.querySelector(".news-text");
@@ -119,7 +119,7 @@ getNews(newsUrl);
 Weather
 ======================*/
 // change "miami to ${city}"
-const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?q=miami&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4`; //has preset location to miami
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=miami&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4`; //has preset location to miami
 
 const temperature = document.querySelector("#temp");
 const description = document.querySelector("#description");
