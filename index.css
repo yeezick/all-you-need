@@ -154,12 +154,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: "Press Start 2P", "Lucida Sans"
 } nav a:hover {
   color: #16263e;
   background-color: #fff8e7;
   border-radius: 5px;
   transition: 3s ease-in-ease-out;
-  padding: 0 .5rem;
+  padding: 0.25rem 0.75rem;
 }
 
 /* HOME */
