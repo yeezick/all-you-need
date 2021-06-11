@@ -1,4 +1,5 @@
 # Home.io
+<small>Deployed using Netflify at: (https://home-io.netlify.app/)</small>
 
 ## Description:
 
