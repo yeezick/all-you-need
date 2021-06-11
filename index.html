@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Source+Code+Pro&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Source+Code+Pro&family=Press+Start+2P&family=Roboto+Mono&family=Montserrat&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="index.js"></script>
@@ -14,7 +17,7 @@
   <body>
     <header>
       <div class="left">
-        <img class="ga-logo" src="images/ga-logo.png" alt=""> 
+        <img class="ga-logo" src="images/ga-logo.png" alt="" />
         <h3>UserName</h3>
       </div>
 
@@ -26,33 +29,34 @@
     </header>
     <main>
       <!-- home -->
-      <section id="home"> 
-        <h1>Good <br> Morning, <br>UserName</h1>
+      <section id="home">
+        <h1>
+          Good <br />
+          Morning, <br />UserName
+        </h1>
 
         <!-- to-do list -->
         <div class="to-do-container">
           <h3 class="card-header">Left on your agenda:</h3>
           <div class="card-body">
-          <ul class="list-items"></ul>
-          <form class="form-div">
-            <label for="to-do">Missing something?</label><br>
-            <input class="todo-input" type="text" />
-            <button class="todo-button">Submit</button>
-          </form>
-        </div>
+            <ul class="list-items"></ul>
+            <form class="form-div">
+              <label for="to-do">Missing something?</label><br />
+              <input class="todo-input" type="text" />
+              <button class="todo-button">Submit</button>
+            </form>
+          </div>
         </div>
 
         <!-- inspirational quote -->
         <div class="inspirational">
-
           <div class="card-header">
-          <h3>Something to keep you going today:</h3>
-          <h4 class="quote-author"></h4>
+            <h3>Something to keep you going today:</h3>
+            <h4 class="quote-author"></h4>
           </div>
           <div class="card-body">
-          <p class="inspirational-quote">Link me to quote API</p>
+            <p class="inspirational-quote">Link me to quote API</p>
           </div>
-
         </div>
         <div class="star star1"></div>
         <div class="star star2"></div>
@@ -62,7 +66,7 @@
         <div class="star star6"></div>
         <div class="star star7"></div>
         <div class="star star8"></div>
-      </section> 
+      </section>
 
       <!-- Near you -->
       <section id="near-you">
@@ -72,12 +76,10 @@
         <article class="news">
           <h3 class="card-header">Headlines in the US:</h3>
           <h4 class="headline"></h4>
-            <h4 class="author card-header"></h4>
+          <h4 class="author card-header"></h4>
           <p class="news-text">Link random news API to me</p>
           <label for="publisher-dropdown">Choose by publisher:</label>
-          <select name="" id="publisher-dropdown">
-            
-          </select>
+          <select name="" id="publisher-dropdown"></select>
         </article>
 
         <!-- forecast -->
@@ -85,44 +87,61 @@
           <div class="card-header">
             <h3>Forecast for your city:</h3>
           </div>
-            <!-- here goes temperature + weather desc +weather image -->
-            <div class="temperature">
-            <p>
-              Temperature:<br> <span id="temp"></span></p>
-              </div>
-            <div class="desc">
-              <p>Description:<br> <span id="description"></span></p>
-            </div>
-
-              <div class="weather-image">
-              <img src="" alt="An icon to match the description of the weather.">
-            </div>
-
-              <div class="hi">
-              <p>High: <br><span id="high"></span></p>
-            </div>
-
-              <div class="lo">
-              <p>Low: <br><span id="low"></span></p>
-            </div>
-
-              <div class="humid">
-              <p>Humidity: <br><span id="humidity"></span></p>
+          <!-- here goes temperature + weather desc +weather image -->
+          <div class="temperature">
+            <div class="fore-card">
+              <h4>Temperature:</h4>
+              <p id="temp"></p>
             </div>
           </div>
+
+          <div class="desc">
+            <div class="fore-card">
+              <h4>Description:</h4>
+              <p id="description"></p>
+            </div>
+          </div>
+
+          <div class="weather-image">
+              <img
+                src=""
+                alt="An icon to match the description of the weather."
+              />
+          </div>
+
+          <div class="hi">
+            <div class="fore-card">
+              <h4>High:</h4>
+              <p id="high"></p>
+            </div>
+          </div>
+
+          <div class="lo">
+            <div class="fore-card">
+              <h4>Low:</h4>
+              <p id="low"></p>
+            </div>
+          </div>
+
+          <div class="humid">
+            <div class="fore-card">
+              <h4>Humidity:</h4>
+              <p id="humidity"></p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- For you -->
-      <section id="for-you">
-
-      </section>
-      <footer>
-        <h5 class="footer-text">
-          A product by <a href="https://erickmanrique.com/">Erick Manrique</a>
-          <br>
-          In association with <a href="https://generalassemb.ly/">General Assembly</a>
-        </h5>
-      </footer>
+      <section id="for-you"></section>
     </main>
+    <!-- <footer>
+      <h5 class="footer-text">
+        A product by <a href="https://erickmanrique.com/">Erick Manrique</a>
+       
+        In association with
+        <a href="https://generalassemb.ly/">General Assembly</a>
+      </h5>
+    </footer> -->
   </body>
 </html>
