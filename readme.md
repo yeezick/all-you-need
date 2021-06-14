@@ -24,21 +24,22 @@ To retrieve the appropriate data, I use:
 
 ### [Joke API](https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit) (to retrieve a one-line joke)
 
-```{
+```
+{
   "error": false,
   "category": "Misc",
   "type": "single",
-  "joke": "Women are like KFC, once you're done with the breasts and thighs, you just have a greasy box to put your bone in.",
+  "joke": "If you're here for the yodeling lesson, please form an orderly orderly orderly queue.",
   "flags": {
-    "nsfw": true,
+    "nsfw": false,
     "religious": false,
     "political": false,
     "racist": false,
-    "sexist": true,
-    "explicit": true
+    "sexist": false,
+    "explicit": false
   },
-  "id": 149,
-  "safe": false,
+  "id": 139,
+  "safe": true,
   "lang": "en"
 }
 ```
