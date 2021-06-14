@@ -160,6 +160,9 @@ Weather
 ======================*/
 // change "miami to ${city}"
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4`; //has preset location to miami
+const weatherHeader = document.querySelector(".forecast-header");
+weatherHeader.innerText = `Forecast for ${firstLetterCase(city)}`
+console.log(weatherHeader)
 
 const temperature = document.querySelector("#temp");
 const description = document.querySelector("#description");
@@ -212,6 +215,7 @@ function weatherChanger(url) {
       forecastContainer.style.background =
         "url(https://media2.giphy.com/media/PIh4laWJlz9bq/giphy.gif?cid=ecf05e471onzfrnepln511m6mm6ly4brsfxn0styxspk17ft&rid=giphy.gif&ct=g) no-repeat center center / cover";
       break;
+    case "overcast clouds":
     case "broken clouds":
       iconCode = "04d";
       forecastContainer.style.background =
