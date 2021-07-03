@@ -161,8 +161,8 @@ Weather
 // change "miami to ${city}"
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=8bfa4632074d84a3d3524ed387556ad4`; //has preset location to miami
 const weatherHeader = document.querySelector(".forecast-header");
-weatherHeader.innerText = `Forecast for ${firstLetterCase(city)}`
-console.log(weatherHeader)
+weatherHeader.innerText = `Forecast for ${firstLetterCase(city)}`;
+console.log(weatherHeader);
 
 const temperature = document.querySelector("#temp");
 const description = document.querySelector("#description");
@@ -203,23 +203,23 @@ function weatherChanger(url) {
     case "clear sky":
       iconCode = "01d";
       forecastContainer.style.background =
-        "url(https://media0.giphy.com/media/VxbvpfaTTo3le/giphy.gif?cid=ecf05e4733z2ls10lumuj6ubt31ta8zpzydt3chqkkg01nsu&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/clear-sky.gif) no-repeat center center / cover";
       break;
     case "few clouds":
       iconCode = "02d";
       forecastContainer.style.background =
-        "url(https://media2.giphy.com/media/c31WXGK1jLQBy/giphy.gif?cid=ecf05e471onzfrnepln511m6mm6ly4brsfxn0styxspk17ft&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/few-clouds.gif) no-repeat center center / cover";
       break;
     case "scattered clouds":
       iconCode = "03d";
       forecastContainer.style.background =
-        "url(https://media2.giphy.com/media/PIh4laWJlz9bq/giphy.gif?cid=ecf05e471onzfrnepln511m6mm6ly4brsfxn0styxspk17ft&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/scattered-clouds.gif) no-repeat center center / cover";
       break;
     case "overcast clouds":
     case "broken clouds":
       iconCode = "04d";
       forecastContainer.style.background =
-        "url(https://media4.giphy.com/media/KwZoSJlvep6Vy/giphy.gif?cid=ecf05e471onzfrnepln511m6mm6ly4brsfxn0styxspk17ft&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/overcast-clouds.gif) no-repeat center center / cover";
       break;
     case "shower rain":
     case "light intensity drizzle	":
@@ -234,7 +234,7 @@ function weatherChanger(url) {
     case "shower drizzle":
       iconCode = "09d";
       forecastContainer.style.background =
-        "url(https://media3.giphy.com/media/t7Qb8655Z1VfBGr5XB/giphy.gif?cid=ecf05e471p9m92z7h5171nt1gqb8yryaxpdd1b2r4e1jaf65&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/drizzle.gif) no-repeat center center / cover";
       break;
     case "rain":
     case "light rain":
@@ -249,7 +249,7 @@ function weatherChanger(url) {
     case "ragged shower rain":
       iconCode = "10d";
       forecastContainer.style.background =
-        "url(https://media3.giphy.com/media/26DMWExfbZSiV0Btm/giphy.gif?cid=ecf05e47q2g6jqmkf5roe2nfq9uz9ti616fyoxcpaqy9ppnt&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/rain.gif) no-repeat center center / cover";
       break;
 
     case "thunderstorm":
@@ -264,23 +264,23 @@ function weatherChanger(url) {
     case "thunderstorm with heavy drizzle":
       iconCode = "11d";
       forecastContainer.style.background =
-        "url(https://media0.giphy.com/media/aPlzgxciAwVj2/giphy.gif?cid=ecf05e471odl2cftb03dc0hfeahz10o5bz9sd1z724x4wsw6&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/thunderstorm.gif) no-repeat center center / cover";
       break;
     case "snow":
       iconCode = "13d";
       forecastContainer.style.background =
-        "url(https://media1.giphy.com/media/irxyCZ6H4zS5G/giphy.gif?cid=ecf05e476nzma8h1i5y0eil18x9ox5iq8zowajtof4m7lagw&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/snow.gif) no-repeat center center / cover";
       break;
     case "mist":
       iconCode = "50d";
       forecastContainer.style.background =
-        "url(https://media2.giphy.com/media/yhZr5Wx7CBFbq/giphy.gif?cid=ecf05e4791cdropxqd51klfr6r34y4c1nmcx3a2sijuhbbjc&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/mist.gif) no-repeat center center / cover";
       break;
 
     default:
       iconCode = "clear sky";
       forecastContainer.style.background =
-        "url(https://media0.giphy.com/media/VxbvpfaTTo3le/giphy.gif?cid=ecf05e4733z2ls10lumuj6ubt31ta8zpzydt3chqkkg01nsu&rid=giphy.gif&ct=g) no-repeat center center / cover";
+        "url(/images/weatherGifs/clear-sky.gif) no-repeat center center / cover";
       break;
   }
   weatherImage.setAttribute(
